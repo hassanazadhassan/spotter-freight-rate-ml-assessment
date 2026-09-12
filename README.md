@@ -17,10 +17,10 @@ scorer_results/candidate_december.png
 
 ## Run locally
 ```bash
-python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
+python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate # py -m
 pip install -r requirements.txt
-python -m src.train
-python score.py --predictions validation_predictions.csv --december-predictions data/december_chart_inputs.csv
+python -m src.train # or py -m
+python score.py --predictions validation_predictions.csv --december-predictions data/december_chart_inputs.csv # or py -m
 ```
 `src.train` writes `validation_predictions.csv` (12,000 rows) and fills in
 `data/december_chart_inputs.csv`. `score.py` checks both files are formatted
